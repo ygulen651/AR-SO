@@ -1,0 +1,28 @@
+{
+  "name": "biskivi-fabrikasi-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Bisküvi Fabrikası Sanity Studio",
+  "main": "package.json",
+  "author": "Bisküvi Fabrikası",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/vision": "^4.10.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "sanity": "^3.99.0",
+    "styled-components": "^6.1.15"
+  },
+  "devDependencies": {
+    "@types/event-source-polyfill": "^1.0.5"
+  }
+}

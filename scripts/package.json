@@ -1,0 +1,9 @@
+{
+  "name": "sanity-scripts",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@sanity/client": "^6.15.0",
+    "dotenv": "^16.0.0"
+  }
+}
