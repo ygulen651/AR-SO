@@ -8,7 +8,8 @@ export const client = MOCK_MODE ? null : createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '4z1l646l',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   apiVersion: '2024-01-01',
-  useCdn: true, // CDN kullanarak public verilere eriş
+  useCdn: false, // Token ile doğrudan API'den çek (private dataset için gerekli)
+  token: process.env.SANITY_API_TOKEN,
 })
 
 // Image URL builder
