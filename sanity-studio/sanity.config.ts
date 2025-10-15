@@ -8,8 +8,13 @@ export default defineConfig({
   title: 'Bisküvi Fabrikası',
   projectId: '4z1l646l',
   dataset: 'production',
+  basePath: '/studio',
   plugins: [structureTool(), visionTool()],
   schema: {
     types: schemaTypes,
+  },
+  api: {
+    projectId: '4z1l646l',
+    dataset: 'production',
   },
 })
