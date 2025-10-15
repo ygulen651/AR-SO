@@ -8,8 +8,7 @@ export const client = MOCK_MODE ? null : createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '4z1l646l',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   apiVersion: '2024-01-01',
-  useCdn: false, // false yaparak fresh data alıyoruz
-  token: process.env.SANITY_API_TOKEN, // API token ekliyoruz
+  useCdn: true, // CDN kullanarak public verilere eriş
 })
 
 // Image URL builder
@@ -65,8 +64,7 @@ export async function getHeroSlides() {
         }
       }
     `, {}, {
-      cache: 'no-store',
-      next: { revalidate: 0 }
+      next: { revalidate: 60 }
     })
     return data?.heroSlides || []
   } catch (error) {
@@ -86,8 +84,7 @@ export async function getConveyorVisuals() {
         }
       }
     `, {}, {
-      cache: 'no-store',
-      next: { revalidate: 0 }
+      next: { revalidate: 60 }
     })
     return data?.ingredientsVisuals || { mainImage: null, floatingImages: [] }
   } catch (error) {
