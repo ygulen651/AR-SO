@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     openGraph: {
       title: urun.ad,
       description: urun.ozet,
-      type: 'product',
+      type: 'website',
       images: [
         {
           url: urun.gorseller[0] || '/products/placeholder.jpg',

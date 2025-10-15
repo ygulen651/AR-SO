@@ -44,7 +44,7 @@ export default async function HomePage() {
     videoSrc: s.videoFile?.asset?.url || s.video?.asset?.url || s.videoUrl || undefined,
   }))
   
-  const vitrinUrunler = products.filter(product => product.isFeatured)
+  const vitrinUrunler = products.filter((product: any) => product.isFeatured)
 
   return (
     <>
@@ -71,7 +71,7 @@ export default async function HomePage() {
               En çok sevilen, en kaliteli ürünlerimiz. Fındıklı gofret, sütlü çikolata, taze kek ve daha fazlası.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {vitrinUrunler.slice(0, 6).map((urun, index) => (
+              {vitrinUrunler.slice(0, 6).map((urun: any, index: number) => (
                 <ProductCard key={urun._id} urun={urun} index={index} />
               ))}
             </div>

@@ -22,7 +22,7 @@ export default function CategoryTabs() {
           setActiveTab(categoriesData[0].slug.current)
           
           // Her kategori için ürünleri çek
-          const productsData = {}
+          const productsData: any = {}
           for (const category of categoriesData) {
             const categoryProducts = await getProductsByCategory(category.slug.current)
             productsData[category.slug.current] = categoryProducts
@@ -58,7 +58,7 @@ export default function CategoryTabs() {
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4 mb-12 h-12 bg-cream-100">
-          {categories.map((kategori) => (
+          {categories.map((kategori: any) => (
             <TabsTrigger
               key={kategori._id}
               value={kategori.slug.current}

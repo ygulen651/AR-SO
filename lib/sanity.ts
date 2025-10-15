@@ -10,7 +10,6 @@ export const client = MOCK_MODE ? null : createClient({
   apiVersion: '2024-01-01',
   useCdn: false, // false yaparak fresh data alıyoruz
   token: process.env.SANITY_API_TOKEN, // API token ekliyoruz
-  ignoreToken: false, // Token'ı kullan
 })
 
 // Image URL builder

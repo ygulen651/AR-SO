@@ -64,7 +64,7 @@ export default function HakkimizdaPage() {
             Hikayemiz
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto text-cream-100">
-            1995'ten beri kalite ve lezzet konusunda ödün vermeden, geleneksel tariflerimizi modern teknoloji ile buluşturuyoruz.
+            1995&apos;ten beri kalite ve lezzet konusunda ödün vermeden, geleneksel tariflerimizi modern teknoloji ile buluşturuyoruz.
           </p>
         </motion.div>
 

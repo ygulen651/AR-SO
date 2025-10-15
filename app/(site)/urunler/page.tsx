@@ -38,7 +38,7 @@ export default function UrunlerPage() {
   }, [])
 
   const filteredUrunler = useMemo(() => {
-    return products.filter((urun) => {
+    return products.filter((urun: any) => {
       const matchesKategori = activeKategori === 'tumu' || urun.category?.slug?.current === activeKategori
       const matchesSearch =
         urun.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -101,7 +101,7 @@ export default function UrunlerPage() {
                 <TabsTrigger value="tumu" className="data-[state=active]:bg-caramel-500 data-[state=active]:text-white">
                   Tümü
                 </TabsTrigger>
-                {categories.map((kategori) => (
+                {categories.map((kategori: any) => (
                   <TabsTrigger
                     key={kategori._id}
                     value={kategori.slug.current}
@@ -137,7 +137,7 @@ export default function UrunlerPage() {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredUrunler.map((urun, index) => (
+          {filteredUrunler.map((urun: any, index: number) => (
             <motion.div
               key={urun._id}
               initial={{ opacity: 0, y: 20 }}

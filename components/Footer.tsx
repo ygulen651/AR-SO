@@ -12,7 +12,7 @@ export default function Footer() {
               Bisküvi Fabrikası
             </h3>
             <p className="text-cream-100/80 text-sm">
-              1995'ten beri kaliteli ve lezzetli bisküvi, çikolata, gofret ve kek ürünleri üretiyoruz.
+              1995&apos;ten beri kaliteli ve lezzetli bisküvi, çikolata, gofret ve kek ürünleri üretiyoruz.
             </p>
           </div>
 
